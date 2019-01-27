@@ -63,7 +63,7 @@ class Light:
 
 
 
-    def changeColour(redVal, greenVal, blueVal):
+    def changeColour(self, redVal, greenVal, blueVal):
         red = GPIO.PWM(self.redPin, 50)
         green = GPIO.PWM(self.greenPin, 50)
         blue = GPIO.PWM(self.blue, 50)
