@@ -72,9 +72,9 @@ class Light:
         green.start(0)
         blue.start(0)
 
-        red.ChangeDutyCycle(redVal)
-        green.ChangeDutyCycle(greenVal)
-        blue.ChangeDutyCycle(blueVal)
+        red.ChangeDutyCycle(int(redVal))
+        green.ChangeDutyCycle(int(greenVal))
+        blue.ChangeDutyCycle(int(blueVal))
         #https://raspi.tv/2013/how-to-use-soft-pwm-in-rpi-gpio-pt-2-led-dimming-and-motor-speed-control
         #https://sourceforge.net/p/raspberry-gpio-python/wiki/PWM/
 
