@@ -75,6 +75,7 @@ class Light:
         red.ChangeDutyCycle(int(redVal))
         green.ChangeDutyCycle(int(greenVal))
         blue.ChangeDutyCycle(int(blueVal))
+        print("changed colour: redVal", redVal, "greenVal", greenVal, "blueVal", blueVal)
         #https://raspi.tv/2013/how-to-use-soft-pwm-in-rpi-gpio-pt-2-led-dimming-and-motor-speed-control
         #https://sourceforge.net/p/raspberry-gpio-python/wiki/PWM/
 
