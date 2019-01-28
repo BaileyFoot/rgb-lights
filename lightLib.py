@@ -82,12 +82,12 @@ class Light:
         #Could just take one value as input. format: rrr,ggg,bbb.
         #this would be readable from text file
 
-        red = GPIO.PWM() #need to put GPIO pin num in brackets. SCOPE!
-        green = GPIO.PWM()
-        blue = GPIO.PWM()
-        red.start(0)
-        green.start(0)
-        blue.start(0)
+        #red = GPIO.PWM() #need to put GPIO pin num in brackets. SCOPE!
+        #green = GPIO.PWM()
+        #blue = GPIO.PWM()
+        #red.start(0)
+        #green.start(0)
+        #blue.start(0)
 
 #will all be in main.py...
 #This is only for testing.
