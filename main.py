@@ -15,3 +15,4 @@ green = int(input("green"))
 blue = int(input("blue"))
 
 lightOne.changeColour(red, green, blue)
+input()
