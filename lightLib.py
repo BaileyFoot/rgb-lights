@@ -6,7 +6,7 @@ import sys
 
 class Pi:
 
-    def __init__(self, mode='board'):
+    def __init__(self, mode='bcm'):
 
         self.mode = mode
         #self.setupGPIO(mode)
@@ -51,19 +51,35 @@ class Light:
         self.greenPin = pins[1]
         self.bluePin = pins[2]
 
+        GPIO.setup(self.redPin, GPIO.OUT)
+        GPIO.setup(self.greenPin, GPIO.OUT)
+        GPIO.setup(self.bluePin, GPIO.OUT)
+
         #creates desired red, green and blue colour val properties.
         #dont't think I need this.
         #self.redVal = redVal
         #self.greenVal = greenVal
         #self.blueVal = blueVal
 
+    def test(self):
+        GPIO.output(self.redPin, True)
+        input("Red pin set to high")
+        GPIO.output(self.redPin, False)
+        GPIO.output(self.greenPin, True)
+        input("Green pin set to high")
+        GPIO.output(self.greenPin, False)
+        GPIO.output(self.bluePin, True)
+        input("Blue pin set to high")
+        GPIO.output(self.greenPin, False)
+        input("Test finished")
+
+
     def setupPins(self):
         #sets up red, green and blue pins for output.
-        GPIO.setup(self.redPin, GPIO.OUT)
-        GPIO.setup(self.greenPin, GPIO.OUT)
-        GPIO.setup(self.bluePin, GPIO.OUT)
 
-
+        #GPIO.setup(self.redPin, GPIO.OUT)
+        #GPIO.setup(self.greenPin, GPIO.OUT)
+        #GPIO.setup(self.bluePin, GPIO.OUT)
 
     def changeColour(self, redVal, greenVal, blueVal):
         red = GPIO.PWM(self.redPin, 50)
