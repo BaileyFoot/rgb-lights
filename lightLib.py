@@ -17,8 +17,10 @@ class Pi:
         #sets board GPIO numbering to BCM or BOARD based on input.
         if self.mode == 'bcm':
             GPIO.setmode(GPIO.BCM)
+            print("Mode BCM")
         elif self.mode == 'board':
             GPIO.setmode(GPIO.BOARD)
+            print("Mode BOARD")
         else:
             print(
             '''
@@ -44,7 +46,7 @@ class Light:
     def __init__(self, pi, pins):
         #creates red, green and blue pins properties.
         self.pi = pi
-        self.pins = []
+        #self.pins = []
         self.redPin = pins[0]
         self.greenPin = pins[1]
         self.bluePin = pins[2]
@@ -75,6 +77,7 @@ class Light:
         red.ChangeDutyCycle(int(redVal))
         green.ChangeDutyCycle(int(greenVal))
         blue.ChangeDutyCycle(int(blueVal))
+
         print(self.redPin)
         print(self.greenPin)
         print(self.bluePin)
