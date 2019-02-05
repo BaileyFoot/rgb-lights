@@ -6,7 +6,7 @@ import sys
 
 class Pi:
 
-    def __init__(self, mode='bcm'):
+    def __init__(self, mode='board'):
 
         self.mode = mode
         #self.setupGPIO(mode)
