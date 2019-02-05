@@ -74,7 +74,7 @@ class Light:
         input("Test finished")
 
 
-    def setupPins(self):
+    #def setupPins(self):
         #sets up red, green and blue pins for output.
 
         #GPIO.setup(self.redPin, GPIO.OUT)
