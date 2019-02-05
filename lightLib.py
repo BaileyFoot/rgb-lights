@@ -70,7 +70,7 @@ class Light:
         GPIO.output(self.greenPin, False)
         GPIO.output(self.bluePin, True)
         input("Blue pin set to high")
-        GPIO.output(self.greenPin, False)
+        GPIO.output(self.bluePin, False)
         input("Test finished")
 
 
