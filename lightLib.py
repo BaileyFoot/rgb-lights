@@ -90,9 +90,9 @@ class Light:
         green.start(0)
         blue.start(0)
 
-        red.ChangeDutyCycle(100)
-        green.ChangeDutyCycle(100)
-        blue.ChangeDutyCycle(100)
+        red.ChangeDutyCycle(redVal)
+        green.ChangeDutyCycle(greenVal)
+        blue.ChangeDutyCycle(blueVal)
 
         print(self.redPin)
         print(self.greenPin)
