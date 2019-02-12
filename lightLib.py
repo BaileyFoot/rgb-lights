@@ -95,11 +95,8 @@ class Light:
         self.bluePwm.start(0)
 
         self.redPwm.ChangeDutyCycle(redVal)
-        input()
         self.greenPwm.ChangeDutyCycle(greenVal)
-        input()
         self.bluePwm.ChangeDutyCycle(blueVal)
-        input()
 
         #print("changed colour: redVal", redVal, "greenVal", greenVal, "blueVal", blueVal)
 
