@@ -91,8 +91,11 @@ class Light:
         blue.start(0)
 
         red.ChangeDutyCycle(redVal)
+        input()
         green.ChangeDutyCycle(greenVal)
+        input()
         blue.ChangeDutyCycle(blueVal)
+        input()
 
         #print("changed colour: redVal", redVal, "greenVal", greenVal, "blueVal", blueVal)
 

@@ -14,7 +14,6 @@ red = int(input("red"))
 green = int(input("green"))
 blue = int(input("blue"))
 
-while True:
-    lightOne.changeColour(red, green, blue)
+lightOne.changeColour(red, green, blue)
 
 input()
