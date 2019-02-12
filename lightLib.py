@@ -55,6 +55,10 @@ class Light:
         GPIO.setup(self.greenPin, GPIO.OUT)
         GPIO.setup(self.bluePin, GPIO.OUT)
 
+        self.redPwm = GPIO.PWM(self.redPin, 50)
+        self.greenPwm = GPIO.PWM(self.greenPin, 50)
+        self.bluePwm = GPIO.PWM(self.bluePin, 50)
+
         #creates desired red, green and blue colour val properties.
         #dont't think I need this.
         #self.redVal = redVal
@@ -82,19 +86,19 @@ class Light:
         #GPIO.setup(self.bluePin, GPIO.OUT)
 
     def changeColour(self, redVal, greenVal, blueVal):
-        red = GPIO.PWM(self.redPin, 50)
-        green = GPIO.PWM(self.greenPin, 50)
-        blue = GPIO.PWM(self.bluePin, 50)
+        #red = GPIO.PWM(self.redPin, 50)
+        #green = GPIO.PWM(self.greenPin, 50)
+        #blue = GPIO.PWM(self.bluePin, 50)
 
-        red.start(0)
-        green.start(0)
-        blue.start(0)
+        self.redPwm.start(0)
+        self.greenPwm.start(0)
+        self.bluePwm.start(0)
 
-        red.ChangeDutyCycle(redVal)
+        self.redPwm.ChangeDutyCycle(redVal)
         input()
-        green.ChangeDutyCycle(greenVal)
+        self.greenPwm.ChangeDutyCycle(greenVal)
         input()
-        blue.ChangeDutyCycle(blueVal)
+        self.bluePwm..ChangeDutyCycle(blueVal)
         input()
 
         #print("changed colour: redVal", redVal, "greenVal", greenVal, "blueVal", blueVal)
