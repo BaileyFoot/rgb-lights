@@ -84,3 +84,7 @@ class Light:
         self.redPwm.ChangeDutyCycle(redVal)
         self.greenPwm.ChangeDutyCycle(greenVal)
         self.bluePwm.ChangeDutyCycle(blueVal)
+
+#encapsulation used as nothing is defined globally/returned to main program.
+#inheritance used when instance of pi is made a property of light. 
+#still need an example of polymorphism.
