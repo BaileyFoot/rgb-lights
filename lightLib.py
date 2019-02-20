@@ -1,4 +1,3 @@
-#Import stuff
 import RPi.GPIO as GPIO
 import time
 import sys
@@ -7,14 +6,12 @@ import sys
 class Pi:
 
     def __init__(self, mode='bcm'):
-
+        #makes the gpio mode a property of the pi class.
         self.mode = mode
-        #self.setupGPIO(mode)
-
 
     def setupGPIO(self):
-
-        #sets board GPIO numbering to BCM or BOARD based on input.
+        #sets board GPIO numbering to BCM or BOARD based on input (bcm by default).
+        #ends program if input is invalid.
         if self.mode == 'bcm':
             GPIO.setmode(GPIO.BCM)
             print("Mode BCM")
@@ -32,6 +29,7 @@ class Pi:
 
 
     def cleanup(self):
+        #cleans up and gpio pins etc.
         print(
         '''
         *GPIOcleanup*
@@ -44,28 +42,25 @@ class Pi:
 class Light:
 
     def __init__(self, pi, pins):
-        #creates red, green and blue pins properties.
+        #creates red, green and blue pin properties.
         self.pi = pi
-        #self.pins = []
         self.redPin = pins[0]
         self.greenPin = pins[1]
         self.bluePin = pins[2]
 
+        #sets up red, geen and blue pins as outputs using gpio.
         GPIO.setup(self.redPin, GPIO.OUT)
         GPIO.setup(self.greenPin, GPIO.OUT)
         GPIO.setup(self.bluePin, GPIO.OUT)
 
+        #sets up red, green and blue pins as pwm outputs using gpio.
         self.redPwm = GPIO.PWM(self.redPin, 50)
         self.greenPwm = GPIO.PWM(self.greenPin, 50)
         self.bluePwm = GPIO.PWM(self.bluePin, 50)
 
-        #creates desired red, green and blue colour val properties.
-        #dont't think I need this.
-        #self.redVal = redVal
-        #self.greenVal = greenVal
-        #self.blueVal = blueVal
-
     def test(self):
+        #tests that the red, green and blue pins are all working.
+        #turns each light on individually.
         GPIO.output(self.redPin, True)
         input("Red pin set to high")
         GPIO.output(self.redPin, False)
@@ -77,42 +72,15 @@ class Light:
         GPIO.output(self.bluePin, False)
         input("Test finished")
 
-
-    #def setupPins(self):
-        #sets up red, green and blue pins for output.
-
-        #GPIO.setup(self.redPin, GPIO.OUT)
-        #GPIO.setup(self.greenPin, GPIO.OUT)
-        #GPIO.setup(self.bluePin, GPIO.OUT)
-
     def changeColour(self, redVal, greenVal, blueVal):
-        #red = GPIO.PWM(self.redPin, 50)
-        #green = GPIO.PWM(self.greenPin, 50)
-        #blue = GPIO.PWM(self.bluePin, 50)
+        #changes the colour of the light using % of red, green and blue.
 
+        #sets % power for each pin to 0.
         self.redPwm.start(0)
         self.greenPwm.start(0)
         self.bluePwm.start(0)
 
+        #applies % power to corresponding pin.
         self.redPwm.ChangeDutyCycle(redVal)
         self.greenPwm.ChangeDutyCycle(greenVal)
         self.bluePwm.ChangeDutyCycle(blueVal)
-
-        #print("changed colour: redVal", redVal, "greenVal", greenVal, "blueVal", blueVal)
-
-        #https://raspi.tv/2013/how-to-use-soft-pwm-in-rpi-gpio-pt-2-led-dimming-and-motor-speed-control
-        #https://sourceforge.net/p/raspberry-gpio-python/wiki/PWM/
-
-
-        #Could just take one value as input. format: rrr,ggg,bbb.
-        #this would be readable from text file
-
-        #red = GPIO.PWM() #need to put GPIO pin num in brackets. SCOPE!
-        #green = GPIO.PWM()
-        #blue = GPIO.PWM()
-        #red.start(0)
-        #green.start(0)
-        #blue.start(0)
-
-#will all be in main.py...
-#This is only for testing.
