@@ -1,4 +1,4 @@
-    import lightLib
+import lightLib
 #need ,lightControls in front of anything that belongs in other file...
 pi = lightLib.Pi()
 pi.setupGPIO()
