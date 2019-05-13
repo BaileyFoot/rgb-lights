@@ -5,7 +5,7 @@ import sys
 
 class Pi:
 
-    def __init__(self, mode='bcm'):
+    def __init__(self, mode='board'):
         #makes the gpio mode a property of the pi class.
         self.mode = mode
 
@@ -86,5 +86,5 @@ class Light:
         self.bluePwm.ChangeDutyCycle(blueVal)
 
 #encapsulation used as nothing is defined globally/returned to main program.
-#inheritance used when instance of pi is made a property of light. 
+#inheritance used when instance of pi is made a property of light.
 #still need an example of polymorphism.
