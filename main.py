@@ -1,4 +1,5 @@
 import lightLib
+import display
 #need ,lightControls in front of anything that belongs in other file...
 pi = lightLib.Pi()
 pi.setupGPIO()
@@ -9,6 +10,8 @@ lightOne = lightLib.Light(pi,[22,23,24])
 #creating instance of Light and running pin setup.
 
 #lightOne.test()
+
+display.output("Hello there!")
 
 red = int(input("red"))
 green = int(input("green"))
