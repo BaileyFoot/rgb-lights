@@ -5,7 +5,7 @@ pi = lightLib.Pi()
 pi.setupGPIO()
 #creating instance of Pi and setting up gpio lib.
 
-lightOne = lightLib.Light(pi,[26,25,24])
+lightOne = lightLib.Light(pi,[26,24,23])
 #lightOne.setupPins()
 #creating instance of Light and running pin setup.
 
