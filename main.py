@@ -9,14 +9,14 @@ lightOne = lightLib.Light(pi,[22,23,24])
 #lightOne.setupPins()
 #creating instance of Light and running pin setup.
 
-#lightOne.test()
+lightOne.test()
 
-display.output("Hello there!")
+#display.output("Hello there!")
 
-red = int(input("red"))
-green = int(input("green"))
-blue = int(input("blue"))
+#red = int(input("red"))
+#green = int(input("green"))
+#blue = int(input("blue"))
 
-lightOne.changeColour(red, green, blue)
+#lightOne.changeColour(red, green, blue)
 
 input()
