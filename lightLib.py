@@ -41,11 +41,11 @@ class Pi:
 class Component:
 
     def __init__(self, pi, pins):
-
+        print(pins)
         self.pi = pi
         #runs through array of pins, creating them as properties of component.
         self.pins = []
-        for i in range(0, len(pins)-1):
+        for i in range(len(pins)):
             self.pins[i] = pins[i]
 
 
