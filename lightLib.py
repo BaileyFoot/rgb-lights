@@ -45,7 +45,7 @@ class Component:
         self.pi = pi
         #runs through array of pins, creating them as properties of component.
         for i in range(len(pins)):
-            self.pin[i] = pins[i]
+            self.pins[i] = pins[i]
 
 
     def testPower(self, pins):
