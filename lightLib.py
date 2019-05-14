@@ -5,7 +5,7 @@ import sys
 
 class Pi:
 
-    def __init__(self, mode='board'):
+    def __init__(self, mode='bcm'):
         #makes the gpio mode a property of the pi class.
         self.mode = mode
 
@@ -60,11 +60,9 @@ class Component:
 class Light(Component):
 
     def __init__(self, pi, pins):
+        #init function of superclass
         Component.__init__(self, pi, pins)
-
         #creates red, green and blue pin properties.
-        #self.pi = pi
-
         self.redPin = pins[0]
         self.greenPin = pins[1]
         self.bluePin = pins[2]
