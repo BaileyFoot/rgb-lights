@@ -78,7 +78,7 @@ class Light(Component):
         self.bluePwm = GPIO.PWM(self.bluePin, 50)
 
     def test(self):
-        print(GPIO.mode)
+        print(GPIO.getmode())
         #tests that the red, green and blue pins are all working.
         #turns each light on individually.
         GPIO.output(self.redPin, True)
