@@ -5,7 +5,7 @@ import sys
 
 class Pi:
 
-    def __init__(self, mode='bcm'):
+    def __init__(self, mode='board'):
         #makes the gpio mode a property of the pi class.
         self.mode = mode
 
