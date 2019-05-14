@@ -1,15 +1,15 @@
 import lightLib
 import display
 #need ,lightControls in front of anything that belongs in other file...
-pi = lightLib.Pi()
-pi.setupGPIO()
+#pi = lightLib.Pi()
+#pi.setupGPIO()
 #creating instance of Pi and setting up gpio lib.
 
-lightOne = lightLib.Light(pi,[22,23,24])
+#lightOne = lightLib.Light(pi,[22,23,24])
 #lightOne.setupPins()
 #creating instance of Light and running pin setup.
 
-lightOne.test()
+#lightOne.test()
 
 #display.output("Hello there!")
 
