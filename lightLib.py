@@ -38,12 +38,32 @@ class Pi:
         )
         GPIO.cleanup()
 
-
-class Light:
+class Component:
 
     def __init__(self, pi, pins):
-        #creates red, green and blue pin properties.
+
         self.pi = pi
+        #runs through array of pins, creating them as properties of component.
+        for i in range(len(pins)):
+            self.pin[i] = pins[i]
+
+
+    def testPower(self, pins):
+        #able to input array of power pins to test each individually.
+        for i in range(len(pins)):
+            GPIO.setup(pins[i], GPIO.OUT)
+            GPIO.output(pins[i], True)
+            input("pin number", i, " set to high.")
+        print("Test finished.")
+
+class Light(Component):
+
+    def __init__(self, pi, pins):
+        Component.__init__(self, pi, pins)
+
+        #creates red, green and blue pin properties.
+        #self.pi = pi
+
         self.redPin = pins[0]
         self.greenPin = pins[1]
         self.bluePin = pins[2]
