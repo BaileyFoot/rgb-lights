@@ -82,7 +82,8 @@ class Light(Component):
         for i in range(len(self.pins)):
             GPIO.setup(self.pins[i-1], GPIO.OUT)
             GPIO.output(self.pins[i-1], True)
-            input("pin number", i, " set to high.")
+            #input("pin number", i , " set to high.")
+            input()
         print("Test finished.")
 
     def changeColour(self, redVal, greenVal, blueVal):
