@@ -49,13 +49,20 @@ class Component:
             self.pins.append(pins[i])
 
 
-    def testOutputs(self, pins):
+    def testOutputs(self):
         #able to input array of power pins to test each individually.
-        for i in range(len(pins)):
-            GPIO.setup(pins[i-1], GPIO.OUT)
-            GPIO.output(pins[i-1], True)
-            input("pin number", i, " set to high.")
+        for i in range(len(self.pins)):
+            #GPIO.setup(self.pins[i], GPIO.OUT)
+            GPIO.output(self.pins[i], True)
+
+            print(self.pins[i], "Set to high.")
+            input()
+
         print("Test finished.")
+
+        for i in range(len(self.pins)):
+            GPIO.output(self.pins[i], False)
+
 
 class Light(Component):
 
@@ -80,11 +87,15 @@ class Light(Component):
     def testOutputs(self):
         #able to input array of power pins to test each individually.
         for i in range(len(self.pins)):
-            print(i)
-            GPIO.setup(self.pins[i], GPIO.OUT)
+            #GPIO.setup(self.pins[i], GPIO.OUT)
             GPIO.output(self.pins[i], True)
+
             print(self.pins[i], "Set to high.")
             input()
+            print(self.pins[i], "Set to low.")
+            GPIO.output(self.pins[i], False)
+            input()
+
         print("Test finished.")
 
     def changeColour(self, redVal, greenVal, blueVal):
