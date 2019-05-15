@@ -49,11 +49,11 @@ class Component:
             self.pins.append(pins[i])
 
 
-    def testPower(self, pins):
+    def testOutputs(self, pins):
         #able to input array of power pins to test each individually.
         for i in range(len(pins)):
-            GPIO.setup(pins[i], GPIO.OUT)
-            GPIO.output(pins[i], True)
+            GPIO.setup(pins[i-1], GPIO.OUT)
+            GPIO.output(pins[i-1], True)
             input("pin number", i, " set to high.")
         print("Test finished.")
 
@@ -77,20 +77,13 @@ class Light(Component):
         self.greenPwm = GPIO.PWM(self.greenPin, 50)
         self.bluePwm = GPIO.PWM(self.bluePin, 50)
 
-    def test(self):
-        print(GPIO.getmode())
-        #tests that the red, green and blue pins are all working.
-        #turns each light on individually.
-        GPIO.output(self.redPin, True)
-        input("Red pin set to high")
-        GPIO.output(self.redPin, False)
-        GPIO.output(self.greenPin, True)
-        input("Green pin set to high")
-        GPIO.output(self.greenPin, False)
-        GPIO.output(self.bluePin, True)
-        input("Blue pin set to high")
-        GPIO.output(self.bluePin, False)
-        input("Test finished")
+    def testOutputs(self):
+        #able to input array of power pins to test each individually.
+        for i in range(len(pins)):
+            GPIO.setup(pins[i-1], GPIO.OUT)
+            GPIO.output(pins[i-1], True)
+            input("pin number", i, " set to high.")
+        print("Test finished.")
 
     def changeColour(self, redVal, greenVal, blueVal):
         #changes the colour of the light using % of red, green and blue.
