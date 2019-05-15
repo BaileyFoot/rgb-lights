@@ -9,7 +9,7 @@ lightOne = lightLib.Light(pi,[11,13,15]) #26,21,23
 #lightOne.setupPins()
 #creating instance of Light and running pin setup.
 
-lightOne.test()
+lightOne.testOutputs()
 
 #display.output("Hello there!")
 
