@@ -79,9 +79,9 @@ class Light(Component):
 
     def testOutputs(self):
         #able to input array of power pins to test each individually.
-        for i in range(len(pins)):
-            GPIO.setup(pins[i-1], GPIO.OUT)
-            GPIO.output(pins[i-1], True)
+        for i in range(len(self.pins)):
+            GPIO.setup(self.pins[i-1], GPIO.OUT)
+            GPIO.output(self.pins[i-1], True)
             input("pin number", i, " set to high.")
         print("Test finished.")
 
