@@ -150,6 +150,13 @@ class Button(Component):
         #Component.__init__(self, pi, self.inputPin)
 
         #need to make functions to test if button is pushed...
+
+    def isPressed(self):
+        if GPIO(input(self.inputPin)) == 1:
+            return True
+        else:
+            return False
+
     def waitForPress(self):
         while GPIO.input(self.inputPin) == 0:
             time.sleep(0.05)
