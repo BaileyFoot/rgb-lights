@@ -153,7 +153,7 @@ class Button(Component):
     def waitForPress(self):
         print(self.inputPin)
         print(GPIO.input(self.inputPin))
-        while GPIO.input(self.inputPin) == GPIO.LOW:
+        while GPIO.input(self.inputPin) == 1:
             time.sleep(0.01)
 
 #encapsulation used as nothing is defined globally/returned to main program.
