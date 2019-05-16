@@ -14,10 +14,10 @@ class Pi:
         #ends program if input is invalid.
         if self.mode == 'bcm':
             GPIO.setmode(GPIO.BCM)
-            print("Mode BCM")
+            #print("Mode BCM")
         elif self.mode == 'board':
             GPIO.setmode(GPIO.BOARD)
-            print("Mode BOARD")
+            #print("Mode BOARD")
         else:
             print(
             '''
@@ -41,7 +41,6 @@ class Pi:
 class Component:
 
     def __init__(self, pi, pins):
-        print(pins)
         self.pi = pi
         #runs through array of pins, creating them as properties of component.
         self.pins = []
@@ -89,11 +88,11 @@ class Light(Component):
         for i in range(len(self.pins)):
             #GPIO.setup(self.pins[i], GPIO.OUT)
             GPIO.output(self.pins[i], True)
-
             print(self.pins[i], "Set to high.")
             input()
-            print(self.pins[i], "Set to low.")
+
             GPIO.output(self.pins[i], False)
+            print(self.pins[i], "Set to low.")
             input()
 
         print("Test finished.")
@@ -152,7 +151,6 @@ class Button(Component):
 
         #need to make functions to test if button is pushed...
     def waitForPress(self):
-        print(GPIO.input(self.inputPin))
         while GPIO.input(self.inputPin) == 0:
             time.sleep(0.05)
 
