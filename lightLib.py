@@ -124,14 +124,20 @@ class Light(Component):
                 print("blue", i)
 
             for i in range(100):
-                self.changeColour(100,100-i,100)
+                self.changeColour(100-i,100,100)
+                time.sleep(.01)
+                print("red", 100-i)
+
+            for i in range(100):
+                self.changeColour(0,100-i,100)
                 time.sleep(.01)
                 print("green", 100-i)
 
             for i in range(100):
-                self.changeColour(100,0,100-i)
+                self.changeColour(i,0,100-i)
                 time.sleep(.01)
                 print("blue", 100-i)
+                print("red", i)
 
 
 #encapsulation used as nothing is defined globally/returned to main program.

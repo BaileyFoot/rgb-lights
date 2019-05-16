@@ -10,6 +10,6 @@ lightOne = lightLib.Light(pi,[11,13,15]) #26,21,23
 
 #lightOne.testOutputs()
 
-lightOne.cycleColours()
+lightOne.cycleColours() 
 
 input()
