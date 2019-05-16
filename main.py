@@ -13,6 +13,10 @@ rightButton = lightLib.Button(pi,12)
 leftButton = lightLib.Button(pi,16)
 #creating instance of Button.
 
+
+display.output("Hello")
+
+
 presses=0
 
 while True:
