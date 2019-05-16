@@ -6,17 +6,10 @@ pi.setupGPIO()
 #creating instance of Pi and setting up gpio lib.
 
 lightOne = lightLib.Light(pi,[11,13,15]) #26,21,23
-#lightOne.setupPins()
-#creating instance of Light and running pin setup.
+#creating instance of Light.
 
-lightOne.testOutputs()
+#lightOne.testOutputs()
 
-#display.output("Hello there!")
-
-#red = int(input("red"))
-#green = int(input("green"))
-#blue = int(input("blue"))
-
-#lightOne.changeColour(red, green, blue)
+lightOne.cycleColours()
 
 input()
