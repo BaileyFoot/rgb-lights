@@ -113,17 +113,22 @@ class Light(Component):
 
     def cycleColours(self):
         for i in range(100):
-            self.changeColour(i,0,0)
-            time.sleep(.05)
-            print("red", i)
-
-        for i in range(100):
             self.changeColour(100,i,0)
             time.sleep(.05)
             print("green", i)
 
         for i in range(100):
             self.changeColour(100,100,i)
+            time.sleep(.05)
+            print("blue", i)
+
+        for i in range(100):
+            self.changeColour(-i,100,100)
+            time.sleep(.05)
+            print("blue", i)
+
+        for i in range(100):
+            self.changeColour(0,-i,100)
             time.sleep(.05)
             print("blue", i)
 
