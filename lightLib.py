@@ -147,7 +147,7 @@ class Button(Component):
         GPIO.setup(self.inputPin, GPIO.IN, pull_up_down=GPIO.PUD_UP)
 
         #init function of superclass
-        Component.__init__(self, pi, self.inputPin)
+        #Component.__init__(self, pi, self.inputPin)
 
         #need to make functions to test if button is pushed...
     def waitForPress(self):
