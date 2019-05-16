@@ -154,6 +154,7 @@ class Button(Component):
     def waitForPress(self):
         while GPIO.input(self.inputPin) == 1:
             time.sleep(0.01)
+            GPIO.cleanup()
 
 #encapsulation used as nothing is defined globally/returned to main program.
 #inheritance used when instance of pi is made a property of light.
