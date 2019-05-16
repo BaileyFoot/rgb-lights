@@ -140,6 +140,20 @@ class Light(Component):
                 #print("red", i)
 
 
+class Button(Component):
+    def __init__(self, pi, inputPin):
+
+        self.inputPin = inputPin
+        GPIO.setup(self.inputPin, GPIO.IN, pull_up_down=GPIO.PUD_UP)
+
+        #init function of superclass
+        Component.__init__(self, pi, self.inputPin)
+
+        #need to make functions to test if button is pushed...
+    def waitForPress(self):
+        while GPIO.input(self.inputPin) == GPIO.LOW:
+            time.sleep(0.01)
+
 #encapsulation used as nothing is defined globally/returned to main program.
 #inheritance used when instance of pi is made a property of light.
 #still need an example of polymorphism.
