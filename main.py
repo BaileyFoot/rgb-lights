@@ -14,7 +14,8 @@ buttonOne = lightLib.Button(pi,12)
 buttonOne.waitForPress()
 
 #lightOne.testOutputs()
-
-lightOne.cycleColours()
-
-input()
+try:
+    lightOne.cycleColours()
+except:
+    GPIO.cleanup()
+    input()
