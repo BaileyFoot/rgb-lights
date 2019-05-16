@@ -129,7 +129,7 @@ class Light(Component):
                 print("green", 100-i)
 
             for i in range(100):
-                self.changeColour(0,100,100-i)
+                self.changeColour(100,0,100-i)
                 time.sleep(.05)
                 print("blue", 100-i)
 
