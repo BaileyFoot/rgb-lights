@@ -160,7 +160,7 @@ class Button(Component):
         #need to make functions to test if button is pushed...
 
     def isPressed(self):
-        if GPIO.input(self.inputPin)) == 1:
+        if GPIO.input(self.inputPin) == 1:
             return True
         else:
             return False
