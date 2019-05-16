@@ -17,5 +17,5 @@ buttonOne.waitForPress()
 try:
     lightOne.cycleColours()
 except:
-    GPIO.cleanup()
+    pi.cleanup()
     input()
