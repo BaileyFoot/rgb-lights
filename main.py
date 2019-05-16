@@ -18,7 +18,7 @@ display.output("left Button: change basic colour.")
 time.sleep(6)
 display.output("right Button: cycle colours")
 time.sleep(6)
-display.output("")
+display.output(" ")
 
 presses=0
 
