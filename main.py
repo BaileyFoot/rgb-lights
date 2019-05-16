@@ -8,8 +8,11 @@ pi.setupGPIO()
 lightOne = lightLib.Light(pi,[11,13,15]) #26,21,23
 #creating instance of Light.
 
+ButtonOne = lightLib.Button(pi,12)
+#creating instance of Button.
+
 #lightOne.testOutputs()
 
-lightOne.cycleColours() 
+lightOne.cycleColours()
 
 input()
