@@ -114,6 +114,15 @@ class Light(Component):
     def cycleColours(self):
         for i in range(100):
             self.changeColour(i,0,0)
+            time.sleep(.05)
+
+        for i in range(100):
+            self.changeColour(100,i,0)
+            time.sleep(.05)
+
+        for i in range(100):
+            self.changeColour(100,100,i)
+            time.sleep(.05)
 
 
 #encapsulation used as nothing is defined globally/returned to main program.
