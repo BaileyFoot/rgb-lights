@@ -14,11 +14,15 @@ leftButton = lightLib.Button(pi,16)
 #creating instance of Button.
 
 
-display.output("left Button: change basic colour.")
-time.sleep(6)
-display.output("right Button: cycle colours")
-time.sleep(6)
-display.output(" ")
+display.output("left Button:")
+time.sleep(5)
+display.output("change basic colour.")
+time.sleep(5)
+display.output("right Button:")
+time.sleep(5)
+display.output("cycle colours")
+time.sleep(5)
+display.output(..)
 
 presses=0
 
