@@ -111,6 +111,11 @@ class Light(Component):
         self.greenPwm.ChangeDutyCycle(greenVal)
         self.bluePwm.ChangeDutyCycle(blueVal)
 
+    def cycleColours(self):
+        for i in range(100):
+            changeColour(i,0,0)
+
+
 #encapsulation used as nothing is defined globally/returned to main program.
 #inheritance used when instance of pi is made a property of light.
 #still need an example of polymorphism.
