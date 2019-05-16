@@ -113,10 +113,13 @@ class Light(Component):
     def basicChangeColour(self, colour):
         if colour == "red":
             self.changeColour(100,0,0)
+            time.sleep(.2)
         if colour == "green":
             self.changeColour(0,100,0)
+            time.sleep(.2)
         if colour == "blue":
             self.changeColour(0,0,100)
+            time.sleep(.2)
 
     def cycleColours(self):
         for i in range(100):
