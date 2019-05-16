@@ -145,7 +145,7 @@ class Button(Component):
 
         self.inputPin = inputPin
         #GPIO.setup(self.inputPin, GPIO.IN, pull_up_down=GPIO.PUD_UP)
-        GPIO.setup(self.inputPin, GPIO.IN, pull_up_down=GPIO.PUD_UP)
+        GPIO.setup(self.inputPin, GPIO.IN, pull_up_down=GPIO.PUD_DOWN)
 
         #init function of superclass
         #Component.__init__(self, pi, self.inputPin)
