@@ -145,15 +145,13 @@ class Button(Component):
 
         self.inputPin = inputPin
         #GPIO.setup(self.inputPin, GPIO.IN, pull_up_down=GPIO.PUD_UP)
-        GPIO.setup(self.inputPin, GPIO.IN)
+        GPIO.setup(self.inputPin, GPIO.IN, pull_up_down=GPIO.PUD_UP))
 
         #init function of superclass
         #Component.__init__(self, pi, self.inputPin)
 
         #need to make functions to test if button is pushed...
     def waitForPress(self):
-        print(self.inputPin)
-        print(GPIO.input(self.inputPin))
         while GPIO.input(self.inputPin) == 1:
             time.sleep(0.1)
 
