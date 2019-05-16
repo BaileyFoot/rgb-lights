@@ -110,6 +110,14 @@ class Light(Component):
         self.greenPwm.ChangeDutyCycle(greenVal)
         self.bluePwm.ChangeDutyCycle(blueVal)
 
+    def basicChangeColour(self, colour):
+        if colour == "red":
+            self.changeColour(100,0,0)
+        if colour == "green":
+            self.changeColour(0,100,0)
+        if colour == "blue":
+            self.changeColour(0,0,100)
+        
     def cycleColours(self):
         while True:
             for i in range(100):

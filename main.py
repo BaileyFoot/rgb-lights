@@ -11,11 +11,10 @@ lightOne = lightLib.Light(pi,[11,13,15]) #26,21,23
 buttonOne = lightLib.Button(pi,12)
 #creating instance of Button.
 
-buttonOne.waitForPress()
+while True:
+    if buttonOne.isPressed():
+        lightOne.cycleColours()
+
+    
 
 #lightOne.testOutputs()
-try:
-    lightOne.cycleColours()
-except:
-    pi.cleanup()
-    input()
