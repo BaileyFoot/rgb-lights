@@ -115,22 +115,22 @@ class Light(Component):
         while True:
             for i in range(100):
                 self.changeColour(100,i,0)
-                time.sleep(.05)
+                time.sleep(.01)
                 print("green", i)
 
             for i in range(100):
                 self.changeColour(100,100,i)
-                time.sleep(.05)
+                time.sleep(.01)
                 print("blue", i)
 
             for i in range(100):
                 self.changeColour(100,100-i,100)
-                time.sleep(.05)
+                time.sleep(.01)
                 print("green", 100-i)
 
             for i in range(100):
                 self.changeColour(100,0,100-i)
-                time.sleep(.05)
+                time.sleep(.01)
                 print("blue", 100-i)
 
 
