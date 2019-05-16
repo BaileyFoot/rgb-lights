@@ -1,5 +1,6 @@
 import lightLib
 import display
+import time
 #need ,lightControls in front of anything that belongs in other file...
 pi = lightLib.Pi()
 pi.setupGPIO()
@@ -8,13 +9,27 @@ pi.setupGPIO()
 lightOne = lightLib.Light(pi,[11,13,15]) #26,21,23
 #creating instance of Light.
 
-buttonOne = lightLib.Button(pi,12)
+rightButton = lightLib.Button(pi,12)
+leftButton = lightLib.Button(pi,16)
 #creating instance of Button.
 
+presses=0
+
 while True:
-    if buttonOne.isPressed():
+    if rightButton.isPressed():
         lightOne.cycleColours()
 
-    
+    if leftButton.isPressed():
+        presses+=1
+        if presses % 3 == 0:
+            lightOne.basicChangeColour("red")
+        elif presses % 3 == 1:
+            lightOne.basicChangeColour("green")
+        elif presses % 3 == 2:
+            lightOne.basicChangeColour("blue")
+
+    time.sleep(.01)
+
+
 
 #lightOne.testOutputs()
