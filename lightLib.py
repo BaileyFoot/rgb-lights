@@ -112,25 +112,26 @@ class Light(Component):
         self.bluePwm.ChangeDutyCycle(blueVal)
 
     def cycleColours(self):
-        for i in range(100):
-            self.changeColour(100,i,0)
-            time.sleep(.05)
-            print("green", i)
+        while True:    
+            for i in range(100):
+                self.changeColour(100,i,0)
+                time.sleep(.05)
+                print("green", i)
 
-        for i in range(100):
-            self.changeColour(100,100,i)
-            time.sleep(.05)
-            print("blue", i)
+            for i in range(100):
+                self.changeColour(100,100,i)
+                time.sleep(.05)
+                print("blue", i)
 
-        for i in range(100):
-            self.changeColour(100-i,100,100)
-            time.sleep(.05)
-            print("red", 100-i)
+            for i in range(100):
+                self.changeColour(100-i,100,100)
+                time.sleep(.05)
+                print("red", 100-i)
 
-        for i in range(100):
-            self.changeColour(0,100-i,100)
-            time.sleep(.05)
-            print("green", 100-i)
+            for i in range(100):
+                self.changeColour(0,100-i,100)
+                time.sleep(.05)
+                print("green", 100-i)
 
 
 #encapsulation used as nothing is defined globally/returned to main program.
