@@ -113,7 +113,7 @@ class Light(Component):
 
     def cycleColours(self):
         for i in range(100):
-            changeColour(i,0,0)
+            self.changeColour(i,0,0)
 
 
 #encapsulation used as nothing is defined globally/returned to main program.
