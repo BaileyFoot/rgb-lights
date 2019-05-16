@@ -119,32 +119,31 @@ class Light(Component):
             self.changeColour(0,0,100)
 
     def cycleColours(self):
-        while True:
-            for i in range(100):
-                self.changeColour(100,i,0)
-                time.sleep(.01)
-                #print("green", i)
+        for i in range(100):
+            self.changeColour(100,i,0)
+            time.sleep(.01)
+            #print("green", i)
 
-            for i in range(100):
-                self.changeColour(100,100,i)
-                time.sleep(.01)
-                #print("blue", i)
+        for i in range(100):
+            self.changeColour(100,100,i)
+            time.sleep(.01)
+            #print("blue", i)
 
-            for i in range(100):
-                self.changeColour(100-i,100,100)
-                time.sleep(.01)
-                #print("red", 100-i)
+        for i in range(100):
+            self.changeColour(100-i,100,100)
+            time.sleep(.01)
+            #print("red", 100-i)
 
-            for i in range(100):
-                self.changeColour(0,100-i,100)
-                time.sleep(.01)
-                #print("green", 100-i)
+        for i in range(100):
+            self.changeColour(0,100-i,100)
+            time.sleep(.01)
+            #print("green", 100-i)
 
-            for i in range(100):
-                self.changeColour(i,0,100-i)
-                time.sleep(.01)
-                #print("blue", 100-i)
-                #print("red", i)
+        for i in range(100):
+            self.changeColour(i,0,100-i)
+            time.sleep(.01)
+            #print("blue", 100-i)
+            #print("red", i)
 
 
 class Button(Component):
