@@ -155,7 +155,7 @@ class Button(Component):
         print(self.inputPin)
         print(GPIO.input(self.inputPin))
         while GPIO.input(self.inputPin) == 1:
-            time.sleep(0.01)
+            time.sleep(0.1)
 
 #encapsulation used as nothing is defined globally/returned to main program.
 #inheritance used when instance of pi is made a property of light.
