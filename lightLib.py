@@ -152,9 +152,8 @@ class Button(Component):
 
         #need to make functions to test if button is pushed...
     def waitForPress(self):
-        while GPIO.input(self.inputPin) =! 1:
+        while GPIO.input(self.inputPin) == 0:
             time.sleep(0.01)
-            GPIO.cleanup()
 
 #encapsulation used as nothing is defined globally/returned to main program.
 #inheritance used when instance of pi is made a property of light.
