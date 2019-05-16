@@ -152,6 +152,7 @@ class Button(Component):
 
         #need to make functions to test if button is pushed...
     def waitForPress(self):
+        print(GPIO.input(self.inputPin))
         while GPIO.input(self.inputPin) == 0:
             time.sleep(0.01)
 
