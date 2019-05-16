@@ -117,7 +117,7 @@ class Light(Component):
             self.changeColour(0,100,0)
         if colour == "blue":
             self.changeColour(0,0,100)
-        
+
     def cycleColours(self):
         while True:
             for i in range(100):
@@ -160,7 +160,7 @@ class Button(Component):
         #need to make functions to test if button is pushed...
 
     def isPressed(self):
-        if GPIO(input(self.inputPin)) == 1:
+        if GPIO.input(self.inputPin)) == 1:
             return True
         else:
             return False
