@@ -22,7 +22,7 @@ display.output("right Button:")
 time.sleep(5)
 display.output("cycle colours")
 time.sleep(5)
-display.output(..)
+display.output("..")
 
 presses=0
 
