@@ -114,10 +114,10 @@ class Light(Component):
         if colour == "red":
             self.changeColour(100,0,0)
             time.sleep(.3)
-        if colour == "green":
+        elif colour == "green":
             self.changeColour(0,100,0)
             time.sleep(.3)
-        if colour == "blue":
+        elif colour == "blue":
             self.changeColour(0,0,100)
             time.sleep(.3)
 
